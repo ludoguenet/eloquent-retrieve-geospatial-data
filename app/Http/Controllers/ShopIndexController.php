@@ -15,7 +15,7 @@ class ShopIndexController extends Controller
         ];
 
         $shops = Shop::query()
-           ->addDistance($coordinates)
+            ->addDistance($coordinates)
             ->latest()
             ->get();
 

@@ -52,7 +52,7 @@
                                     <span class="inline-flex items-center rounded-md {{ $shop->is_open ? 'bg-green-50 text-green-700 ring-green-600/20' : 'bg-red-50 text-red-700 ring-red-600/20' }} px-2 py-1 text-xs font-medium ring-1 ring-inset">{{ $shop->is_open ? 'ouvert' : 'fermé' }}</span>
                                 </td>
                                 <td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-                                    <div class="text-gray-900">{{ \Illuminate\Support\Number::format($shop->distance, precision: 2, locale: 'fr') }} km</div>
+                                    <div class="text-gray-900">{{ \Illuminate\Support\Number::format($shop->distance / 1000, precision: 2, locale: 'fr') }} km</div>
                                 </td>
                             </tr>
                         @endforeach
